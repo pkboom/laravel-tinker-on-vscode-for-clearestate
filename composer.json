@@ -1,0 +1,55 @@
+{
+    "name": "pkboom/laravel-tinker-on-vscode",
+    "description": "Tinker on vscode",
+    "keywords": [
+        "pkboom",
+        "tinker",
+        "vscode"
+    ],
+    "homepage": "https://github.com/pkboom/laravel-tinker-on-vscode",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keunbae Park",
+            "email": "ppotpo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "illuminate/console": "^8.0|^9.0",
+        "illuminate/http": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0",
+        "laravel/tinker": "^2.6",
+        "pkboom/file-watcher": "^0.2.0",
+        "react/event-loop": "^1.2",
+        "symfony/console": "^5.0|^6.0",
+        "symfony/finder": "^5.4|^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.23",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pkboom\\TinkerOnVscode\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pkboom\\TinkerOnVscode\\TinkerOnVscodeServiceProvider"
+            ]
+        }
+    }
+}
